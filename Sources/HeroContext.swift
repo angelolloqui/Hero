@@ -46,14 +46,14 @@ public class HeroContext {
   internal func process(views: [UIView], idMap: inout [String: UIView]) {
     for view in views {
       view.layer.removeAllAnimations()
-      if container.convert(view.bounds, from: view).intersects(container.bounds) {
+//      if container.convert(view.bounds, from: view).intersects(container.bounds) {
         if let heroID = view.heroID {
           idMap[heroID] = view
         }
         if let modifiers = view.heroModifiers {
           targetStates[view] = HeroTargetState(modifiers: modifiers)
         }
-      }
+//      }
     }
   }
 
